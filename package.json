@@ -1,0 +1,23 @@
+{
+    "name": "mern-product-app",
+    "version": "1.0.0",
+    "description": "This project is using MERN stack [ Mongo DB, ExpressJs, ReactJs, NodeJs] and created for learning purposes.",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon backend/server.js",
+        "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+        "start": "node backend/server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.21.0",
+        "mongoose": "^8.7.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.7"
+    }
+}
