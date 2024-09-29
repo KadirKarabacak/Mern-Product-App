@@ -1,4 +1,4 @@
-# **MERN Stack Product App**
+# **MERN Stack Product App 🍃**
 
 This project is using MERN stack [ Mongo DB, ExpressJs, ReactJs, NodeJs] and created for learning purposes.
 
@@ -49,7 +49,7 @@ This project is using MERN stack [ Mongo DB, ExpressJs, ReactJs, NodeJs] and cre
 -   Mongo DB using NoSQL as default.
 -   NoSQL means we have `Collections` in MongoDB and each Collection contains `documents` as like Firebase. MySQL and SQL creates `Tables` instead of collections.
 
-### **Postman**
+### **Postman 🕴**
 
 -   Postman is a tool that simplifies `API development, testing and documentation`. It is very widely used, especially for working with web APIs such as RESTful and GraphQL.
 
