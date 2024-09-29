@@ -6,7 +6,7 @@ This project is using MERN stack [ Mongo DB, ExpressJs, ReactJs, NodeJs] and cre
 
 -   Initialize npm with `npm init -y`
 -   Install packages for backend `npm install express mongoose dotenv`
--   `Expressjs` for build an API easily and for routing system
+-  `Expressjs` for build an API easily and for routing system
 -   `Mongoose` for the interact with the database which is **Mongo DB**
 -   `Dotenv` for the create and access environment variables
 -   After all create a file named `server.js` inside backend folder. Import express inside this file, call as app and then listen for port.
@@ -31,8 +31,14 @@ This project is using MERN stack [ Mongo DB, ExpressJs, ReactJs, NodeJs] and cre
 -   Next, move into the server.js and `import path from "path";` and then create a variable like `const __dirname = path.resolve()`. With this variable we have to check if we are on the production or development.
 -   Next, move into the frontend folder and run `npm run build` to ready up vite for production.
 -   After the build completed, in server.js file under the productRoutes usage, write this code
--   ```if (process.env.NODE_ENV === "production") {
-        app.use(express.static(path.join(__dirname, "frontend/dist")));
+-   ```
+    if (process.env.NODE_ENV === "production") {
+     app.use(express.static(path.join(__dirname, "frontend/dist")));
+
+     // Express will serve up production assets
+     app.get("*", (req, res) =>
+        res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"))
+     );
     }
     ```
 -   Next, create build script for production like `"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"`. This handles installing & building both backend & frontend node_modules folders.
