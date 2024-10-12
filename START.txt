@@ -1,0 +1,18 @@
+# Make sure run backend on root with `npm run dev` & in frontend with `npm run dev`
+
+# dev and build scripts error 
+
+For those who are getting this error
+"NODE_ENV" is not recognized as an internal or external command, operable command or batch file.
+
+install this  -  npm install cross-env --save-dev
+then add cross-env before both -  
+
+"scripts": {
+  "dev": "cross-env NODE_ENV=development nodemon backend/server.js",
+  "start": "cross-env NODE_ENV=production node backend/server.js"
+}
+
+then npm run start
+
+"you re good to go 😊"
