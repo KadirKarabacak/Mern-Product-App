@@ -4,6 +4,7 @@ import { connectDB } from "./config/db.js";
 import path from "path";
 
 import productRoutes from "./routes/product.route.js";
+import userRoutes from "./routes/user.route.js";
 
 dotenv.config();
 // init express
@@ -18,6 +19,7 @@ app.use(express.json());
 
 // Use product route for api endpoints. /api/products simply prefixed for productRoutes
 app.use("/api/products", productRoutes);
+app.use("/api/users", userRoutes);
 
 //! Here we must check if we are on production or development
 if (process.env.NODE_ENV === "production") {
